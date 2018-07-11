@@ -1,4 +1,4 @@
-docker_ppa_repo:
+qdirstat_ppa_repo:
   pkgrepo.managed:
     - name: deb http://ppa.launchpad.net/nathan-renniewaldock/qdirstat/ubuntu {{ grains['oscodename'] }} main     
     - file: /etc/apt/sources.list.d/qdirstat.list
@@ -7,7 +7,7 @@ docker_ppa_repo:
     - require_in:
       - qdirstat_package_dependencies
 
-docker_package_dependencies:
+qdirstat_package_dependencies:
   pkg.installed:
     - pkgs:
       - qdirstat
